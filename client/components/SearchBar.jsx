@@ -4,7 +4,6 @@ import customFetch from "../utils/customFetch";
 const SearchBar = ({setResults}) => {
   const [input , setInput] = useState("");
   const fetchData = async (value) => {
-    console.log((value === ''), 's');
     if (value !== ''){
       const { data } = await customFetch.post('/cars/search' ,  {searchCar:value});
       const {cars} = data;
